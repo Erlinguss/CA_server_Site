@@ -7,6 +7,5 @@
   </div>
 </main><!-- /.container -->
 
-<!-- <script src="js/bootstrap.bundle.min.js"></script> -->
 
 <?php include 'includes/footer.php'; ?>
