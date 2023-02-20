@@ -2,7 +2,7 @@
 
 <main class="container">
   <div class="starter-template text-center">
-    <h1>CONTACT</h1>
+    <h1>Contact us</h1>
     <p class="lead">THE CONTACT FORM WILL BE HERE
 
 
