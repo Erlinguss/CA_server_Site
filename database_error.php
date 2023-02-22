@@ -3,13 +3,13 @@
 
 <!-- the head section -->
 <head>
-    <title>Product Manager</title>
+    <title>Clinic Manager</title>
     <link rel="stylesheet" type="text/css" href="main.css" />
 </head>
 
 <!-- the body section -->
 <body>
-    <header><h1>Product Manager</h1></header>
+    <header><h1>Clinic Manager</h1></header>
 
     <main>
         <h1>Database Error</h1>
@@ -20,7 +20,7 @@
     </main>
 
     <footer>
-        <p>&copy; <?php echo date("Y"); ?> Product Manager, Inc.</p>
+        <p>&copy; <?php echo date("Y"); ?> Clinic Manager, Inc.</p>
     </footer>
 </body>
 </html>
