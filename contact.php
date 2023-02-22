@@ -37,18 +37,7 @@
   </select>
 
         </div>
-        <div class="mb-3">
-        <label for="interests">Interests:</label>
-  <input type="checkbox" id="interest1" name="interests" value="reading">
-  <label for="interest1">Reading</label>
-  <input type="checkbox" id="interest2" name="interests" value="music">
-  <label for="interest2">Music</label>
-  <input type="checkbox" id="interest3" name="interests" value="sports">
-  <label for="interest3">Sports</label>
-  </div>
-
-
-
+     
         <div class="mb-3">
         <label for="age">Age:</label>
   <input type="number" id="age" name="age" min="18" max="120">
