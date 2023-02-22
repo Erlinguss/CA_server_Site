@@ -1,13 +1,13 @@
 <?php
 require_once('database.php');
 
-// Get products
-$queryProducts = 'SELECT * FROM products';
-$statement = $db->prepare($queryProducts);
+// Get patients
+$queryPatients = 'SELECT * FROM patient';
+$statement = $db->prepare($queryPatients);
 $statement->execute();
-$products = $statement->fetchAll();
+$patients = $statement->fetchAll();
 $statement->closeCursor();
-//print_r($products); // this is to get the data as an array!
+//print_r($patients); // this is to get the data as an array!
 ?>
 <?php include 'includes/header.php'; ?> 
 

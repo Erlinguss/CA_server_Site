@@ -3,7 +3,7 @@
 
 <!-- the head section -->
 <head>
-    <title>Clinic Manager</title>
+    <title>Dental Clinic</title>
     <link rel="stylesheet" type="text/css" href="main.css" />
 </head>
 
@@ -20,7 +20,7 @@
     </main>
 
     <footer>
-        <p>&copy; <?php echo date("Y"); ?> Clinic Manager, Inc.</p>
+        <p>&copy; <?php echo date("Y"); ?> Dental Clinic, Inc.</p>
     </footer>
 </body>
 </html>

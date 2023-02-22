@@ -1,13 +1,14 @@
+
 <?php
 require_once('database.php');
 
-// Get products
-$queryProducts = 'SELECT * FROM products';
-$statement = $db->prepare($queryProducts);
+// Get patients
+$queryPatients = 'SELECT * FROM patient';
+$statement = $db->prepare($queryPatients);
 $statement->execute();
-$products = $statement->fetchAll();
+$patients = $statement->fetchAll();
 $statement->closeCursor();
-//print_r($products); // this is to get the data as an array!
+//print_r($patients); // this is to get the data as an array!
 ?>
 
 <?php include 'includes/header.php';?>
@@ -18,25 +19,28 @@ $statement->closeCursor();
         <!-- display a table of products -->
         <table>
             <tr>
-                <th>Code</th>
-                <th>Name</th>
-                <th>Price</th>
-                <th>Description</th>
-                <th>Category</th>
+                
+                <th>First_Name</th>
+                <th>SurName</th>
+                <th>Address</th>
+                <th>Telephone</th>
+                <th>Email</th>
+
                 <th>Delete</th>
             </tr>
 
-            <?php foreach ($products as $product) : ?>
+            <?php foreach ($patients as $patient) : ?>
             <tr>
-                <td><?php echo $product['productCode']; ?></td>
-                <td><?php echo $product['productName']; ?></td>
-                <td class="right"><?php echo $product['listPrice']; ?></td>
-                <td><?php echo $product['description']; ?></td>
-                <td><?php echo $product['category']; ?></td>
-                <td><form action="delete_product.php" method="post">
-                    <input type="hidden" name="product_id"
-                           value="<?php echo $product['productID']; ?>">
-                    <input type="submit" value="Delete">
+                
+                <td><?php echo $patient['First_Name_Patient']; ?></td>
+                <td><?php echo $patient['Last_Name_Patient']; ?></td>
+                 <td><?php echo $patient['Patient_Address']; ?></td>
+                <td><?php echo $patient['Patient_Telephone']; ?></td>
+                <td><?php echo $patient['Patient_Email']; ?></td>
+                <td><form action="delete_patient.php" method="post">
+                <input type="hidden" name="product_id"
+                 value="<?php echo $patient['Patient_Id']; ?>">
+                <input type="submit" value="Delete">
                 </form></td>
             </tr>
             <?php endforeach; ?>
