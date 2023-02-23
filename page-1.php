@@ -11,11 +11,6 @@ $statement->closeCursor();
 //print_r($doctors); // this is to get the data as an array!
 ?>
 
-
-
-
-
-
 <?php
 require_once('database.php');
 
@@ -74,11 +69,7 @@ $statement->closeCursor();
 
 
 
-
-
-
-
-
+    
    <section>
         <!-- display a table of patients -->
         <table>
@@ -110,6 +101,17 @@ $statement->closeCursor();
             <?php endforeach; ?>
         </table>
     </section>
+
+
+
+
+
+
+
+
+
+
+    
 
 </main><!-- /.container -->
 <?php include 'includes/footer.php';?>
