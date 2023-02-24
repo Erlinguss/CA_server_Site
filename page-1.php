@@ -34,7 +34,7 @@ $statement->closeCursor();
       
         <table>
             <tr>
-               
+                <th>ID_Code</th>
                 <th>First_Name</th>
                 <th>SurName</th>
                 <th>Address</th>
@@ -45,7 +45,8 @@ $statement->closeCursor();
 
             <?php foreach ($doctors as $doctor) : ?>
             <tr>
-                
+                <td><?php echo $doctor['Doctor_Id']; ?></td>
+                <td><?php echo $doctor['Patient_Id']; ?></td>
                 <td><?php echo $doctor['First_Name_Doctor']; ?></td>
                 <td><?php echo $doctor['Last_Name_Doctor']; ?></td>
                  <td><?php echo $doctor['Doctor_Address']; ?></td>
@@ -68,7 +69,7 @@ $statement->closeCursor();
         <!-- display a table of patients -->
         <table>
             <tr>
-                
+                <th>ID_Code</th>
                 <th>First_Name</th>
                 <th>SurName</th>
                 <th>Address</th>
@@ -80,6 +81,7 @@ $statement->closeCursor();
 
             <?php foreach ($patients as $patient) : ?>
             <tr>
+                <td><?php echo $patient['Patient_Id']; ?></td>
                 <td><?php echo $patient['First_Name_Patient']; ?></td>
                 <td><?php echo $patient['Last_Name_Patient']; ?></td>
                  <td><?php echo $patient['Patient_Address']; ?></td>
