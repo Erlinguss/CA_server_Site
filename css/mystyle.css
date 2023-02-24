@@ -1,12 +1,5 @@
 
 
-.container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-bottom: 100px ;
-  }
-  
   /* Style the form */
   form {
     max-width: 600px;
@@ -255,3 +248,35 @@ margin-top: 1em;
 #add_product_form input[text] {
   width: 15em;
 }
+
+
+/********************************************************************
+* Additional styles for the patient table
+********************************************************************/
+
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 100px ;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+th {
+  background-color: #4CAF50;
+  color: white;
+}
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+

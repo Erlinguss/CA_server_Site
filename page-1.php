@@ -24,13 +24,14 @@ $statement->closeCursor();
 ?>
 
 
-
 <?php include 'includes/header.php';?>
 
-<main class="container">
+<main >
 
+<div class="container" >
 <section>
         <!-- display a table of doctors -->
+      
         <table>
             <tr>
                
@@ -39,7 +40,6 @@ $statement->closeCursor();
                 <th>Address</th>
                 <th>Telephone</th>
                 <th>Email</th>
-
                 <th>Delete</th>
             </tr>
 
@@ -62,14 +62,8 @@ $statement->closeCursor();
         </table>
     </section>
 
-
-
-
-
-
-
-
-    
+    </div >
+    <div class="container">
    <section>
         <!-- display a table of patients -->
         <table>
@@ -86,31 +80,23 @@ $statement->closeCursor();
 
             <?php foreach ($patients as $patient) : ?>
             <tr>
-                
                 <td><?php echo $patient['First_Name_Patient']; ?></td>
                 <td><?php echo $patient['Last_Name_Patient']; ?></td>
                  <td><?php echo $patient['Patient_Address']; ?></td>
                 <td><?php echo $patient['Patient_Telephone']; ?></td>
                 <td><?php echo $patient['Patient_Email']; ?></td>
+
                 <td><form action="delete_patient.php" method="post">
-    <input type="hidden" name="record_type" value="doctor">
-    <input type="hidden" name="record_id" value="<?php echo $doctor['Doctor_Id']; ?>">
+    <input type="hidden" name="record_type" value="patient">
+    <input type="hidden" name="record_id" value="<?php echo $patient['Patient_Id']; ?>">
     <input type="submit" value="Delete">
 </form></td>
+
             </tr>
             <?php endforeach; ?>
         </table>
     </section>
-
-
-
-
-
-
-
-
-
-
+    </div>
     
 
 </main><!-- /.container -->
