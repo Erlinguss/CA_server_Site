@@ -54,11 +54,11 @@ $statement->closeCursor();
                  <td><?php echo $doctor['Doctor_Address']; ?></td>
                 <td><?php echo $doctor['Doctor_Telephone']; ?></td>
                 <td><?php echo $doctor['Doctor_Email']; ?></td>
-                <td><form1 action="delete_patient.php" method="post">
+                <td><form action="delete_patient.php" method="post">
                         <input type="hidden" name="record_type" value="doctor">
                         <input type="hidden" name="record_id" value="<?php echo $doctor['Doctor_Id']; ?>">
                         <input type="submit" value="Delete">
-                    </form1>
+                    </form>
 </td>
             </tr>
             <?php endforeach; ?>
@@ -90,11 +90,11 @@ $statement->closeCursor();
                 <td><?php echo $patient['Patient_Telephone']; ?></td>
                 <td><?php echo $patient['Patient_Email']; ?></td>
 
-                <td><form1 action="delete_patient.php" method="post">
+                <td><form action="delete_patient.php" method="post">
     <input type="hidden" name="record_type" value="patient">
     <input type="hidden" name="record_id" value="<?php echo $patient['Patient_Id']; ?>">
     <input type="submit" value="Delete">
-</form1></td>
+</form></td>
 
             </tr>
             <?php endforeach; ?>

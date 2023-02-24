@@ -14,10 +14,20 @@ $statement->closeCursor();
 
 <main class="container">
   <div class="starter-template text-center">
-    <h1>Bootstrap starter template</h1>
-    <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
+    
+    <img src="images/dental1.jpeg" alt="">
+  
   </div>
+  
 
 </main><!-- /.container -->
 
+
+
+
+
+<div class= container>
+  <!-- <img src="images/dental2.jpg" alt="">
+  <img src="images/dental3.jpeg" alt=""> -->
+  </div>
 <?php include 'includes/footer.php'; ?>
