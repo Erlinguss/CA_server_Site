@@ -33,8 +33,10 @@ $statement->closeCursor();
         <!-- display a table of doctors -->
       
         <table>
+        <h1>Doctor Table </h1>
             <tr>
-                <th>ID_Code</th>
+                <th>Doctor_ID</th>
+                <th>Patient_ID</th>
                 <th>First_Name</th>
                 <th>SurName</th>
                 <th>Address</th>
@@ -52,12 +54,12 @@ $statement->closeCursor();
                  <td><?php echo $doctor['Doctor_Address']; ?></td>
                 <td><?php echo $doctor['Doctor_Telephone']; ?></td>
                 <td><?php echo $doctor['Doctor_Email']; ?></td>
-                <td><form action="delete_patient.php" method="post">
+                <td><form1 action="delete_patient.php" method="post">
                         <input type="hidden" name="record_type" value="doctor">
                         <input type="hidden" name="record_id" value="<?php echo $doctor['Doctor_Id']; ?>">
                         <input type="submit" value="Delete">
-                    </form>
-</form></td>
+                    </form1>
+</td>
             </tr>
             <?php endforeach; ?>
         </table>
@@ -68,14 +70,14 @@ $statement->closeCursor();
    <section>
         <!-- display a table of patients -->
         <table>
+            <h1>Patient Table </h1>
             <tr>
-                <th>ID_Code</th>
+                <th>Patient_ID</th>
                 <th>First_Name</th>
                 <th>SurName</th>
                 <th>Address</th>
                 <th>Telephone</th>
                 <th>Email</th>
-
                 <th>Delete</th>
             </tr>
 
@@ -88,11 +90,11 @@ $statement->closeCursor();
                 <td><?php echo $patient['Patient_Telephone']; ?></td>
                 <td><?php echo $patient['Patient_Email']; ?></td>
 
-                <td><form action="delete_patient.php" method="post">
+                <td><form1 action="delete_patient.php" method="post">
     <input type="hidden" name="record_type" value="patient">
     <input type="hidden" name="record_id" value="<?php echo $patient['Patient_Id']; ?>">
     <input type="submit" value="Delete">
-</form></td>
+</form1></td>
 
             </tr>
             <?php endforeach; ?>

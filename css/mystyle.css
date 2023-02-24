@@ -1,9 +1,11 @@
 
 
-  /* Style the form */
+/********************************************************************
+  * Style the form 
+********************************************************************/
   form {
     max-width: 600px;
-    padding: 20px;
+    padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
@@ -40,7 +42,7 @@
   
   form button {
     margin-top: 20px;
-    padding: 10px 20px;
+    padding: 10px 10px;
     border: none;
     border-radius: 5px;
     background-color: #007bff;
@@ -61,7 +63,12 @@
     background-color: #5a6268;
   }
   
-  /* Style the form header */
+
+   
+/********************************************************************
+  * Style the form header 
+********************************************************************/
+
   form h1 {
     margin-top: 0;
   }
@@ -70,12 +77,19 @@
     margin-bottom: 20px;
   }
   
-  /* Style the form message */
+
+  
+  /********************************************************************
+  *Style the form message 
+********************************************************************/
   form textarea {
     height: 120px;
   }
   
-  /* Style the form checkboxes and radio buttons */
+
+  /********************************************************************
+  * Style the form checkboxes and radio buttons 
+********************************************************************/
   form label.checkbox,
   form label.radio {
     display: inline-block;
@@ -115,7 +129,11 @@
     background-color: #fff;
   }
   
-  /* Style the form file input */
+
+/********************************************************************
+ * Style the form file input 
+********************************************************************/
+  
   form label.file {
     display: block;
     position: relative;
@@ -160,11 +178,7 @@ nav ul {
 nav ul li {
   padding-bottom: 0.5em;
 }
-section {
-  float: left;
-  width: 500px;
-  padding-bottom: 1.5em;
-}
+
 footer {
   clear: both;
   margin-top: 1em;
@@ -219,7 +233,10 @@ form {
 br {
   clear: left;
 }
-/* the styles for classes */
+
+/********************************************************************
+* the styles for classes 
+********************************************************************/
 .right {
   text-align: right;
 }
@@ -231,7 +248,7 @@ margin-top: 1em;
 }
 
 /********************************************************************
-* Additional styles for the Clinic Manager application
+* Additional styles for the Clinic application
 ********************************************************************/
 #add_product_form {
   margin: .5em 0 1em;
@@ -251,7 +268,7 @@ margin-top: 1em;
 
 
 /********************************************************************
-* Additional styles for the patient table
+* Additional styles for the Patient and Coctor table
 ********************************************************************/
 
 
@@ -259,10 +276,18 @@ margin-top: 1em;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-bottom: 100px ;
+  padding-bottom: 30px ;
+  padding-top: 50px;
+
 }
+/* section {
+  float: left;
+  width: 500px;
+  padding-bottom: 1.5em;
+} */
 
 table {
+  
   border-collapse: collapse;
   width: 100%;
 }
@@ -272,8 +297,9 @@ th, td {
   border-bottom: 1px solid #ddd;
 }
 th {
-  background-color: #4CAF50;
+  background-color: #555755;
   color: white;
+  height:70px;
 }
 tr:nth-child(even) {
   background-color: #f2f2f2;
