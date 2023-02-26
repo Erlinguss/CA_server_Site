@@ -4,8 +4,16 @@ $errors = '';
 $myemail = 'd00251914@student.dkit.ie';// <-----Put your DkIT email address here.
 if(empty($_POST['name'])  ||
    empty($_POST['email']) ||
+   empty($_POST['password']) ||
+   empty($_POST['dob']) ||
+   empty($_POST['gender']) ||
+   empty($_POST['website']) ||
+   empty($_POST['attachment ']) ||
+   empty($_POST['newsletter']) ||
    empty($_POST['phone']) ||
-   empty($_POST['message']))
+   empty($_POST['message']) ||
+   empty($_POST['terms']))
+
 {
     $errors .= "\n Error: all fields are required";
 }
@@ -18,18 +26,73 @@ $headers .= 'From: '.$myemail."\r\n".
 
 $name = $_POST['name'];
 $email_address = $_POST['email'];
+$password = $_POST['password'];
+$dob = $_POST['dob'];
+$gender = $_POST['gender'];
+$age = $_POST['age'];
+$website = $_POST['website'];
+$color = $_POST['color'];
+$attachment = $_POST['attachment'];
 $phone = $_POST['phone'];
+$newsletter = $_POST['newsletter'];
 $message = $_POST['message'];
+$terms = $_POST['terms'];
 
-if (!preg_match(
-"/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$/i",
-$email_address))
-{
-    $errors .= "\n Error: Invalid email address";
-}
+
+if (empty($name)) {
+    $error .= 'Please enter your name.<br>';
+  }
+
+ if (!preg_match(
+    "/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$/i",
+    $email_address))
+    {
+        $errors .= "\n Error: Invalid email address";
+    }
+    
+  if (empty($password)) {
+    $error .= 'Please enter your password.<br>';
+  }
+
+  if (empty($dob)) {
+    $error .= 'Please enter your date of birth.<br>';
+  }
+
+  if (empty($gender)) {
+    $error .= 'Please select your gender.<br>';
+  }
+
+  if (!empty($age) && ($age < 18 || $age > 120)) {
+    $error .= 'Please enter a valid age between 18 and 120.<br>';
+  }
+
+  if (!empty($website) && !filter_var($website, FILTER_VALIDATE_URL)) {
+    $error .= 'Please enter a valid website URL.<br>';
+  }
+
+  if (!empty($phone) && !preg_match('/^[0-9]{3}-[0-9]{2}-[0-9]{3}$/', $phone)) {
+    $error .= 'Please enter a valid phone number in the format 123-45-678.<br>';
+  }
+
+  if (!empty($newsletter) && $newsletter != 'yes') {
+    $error .= 'Please agree to subscribe to our newsletter.<br>';
+  }
+
+  if (empty($message)) {
+    $error .= 'Please enter your message.<br>';
+  }
+
+  if (empty($terms)) {
+    $error .= 'Please agree to the terms and conditions.<br>';
+  }
+
+
+
+
 
 if( empty($errors))
-{
+{ 
+    // Send the email
         $to = $myemail;
         $email_subject = "Contact form submission: $name";
         $email_body = "You have received a new message. ".
@@ -38,13 +101,36 @@ if( empty($errors))
         Name: $name \n 
         Email: $email_address \n 
         phone: $phone \n 
-        Message \n $message";
+        Password: $password \n
+        Date of Birth: $dob \n
+        Gender: $gender \n
+        Age: $age \n
+        Website: $website \n
+        Favorite Color: $color \n
+        Attachment: $attachment \n
+        Phone Number: $phone \n
+        Subscribe to Newsletter: $newsletter \n
+        Message\n $message";
 
-        mail($to,$email_subject,$email_body,$headers);
+        // mail($to,$email_subject,$email_body,$headers);//teacher code
+        // //redirect to the 'thank you' page
+        // header('Location: contact-form-thank-you.php');
+       
+       
+    if( mail($to,$email_subject,$email_body,$headers))
+    {
         //redirect to the 'thank you' page
         header('Location: contact-form-thank-you.php');
+        exit;
 }
+else {
+    $error = 'There was a problem sending the email.';
+}
+}
+
 ?>
+
+
 <!DOCTYPE HTML>
 <html>
 <head>
