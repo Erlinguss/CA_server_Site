@@ -19,6 +19,7 @@ if(empty($_POST['name'])  ||
 }
 
 // Important: Create email headers to avoid spam folder
+$headers = '';
 $headers .= 'From: '.$myemail."\r\n".
     'Reply-To: '.$myemail."\r\n" .
     'X-Mailer: PHP/' . phpversion();
@@ -39,55 +40,58 @@ $message = $_POST['message'];
 $terms = $_POST['terms'];
 
 
+
 if (empty($name)) {
-    $error .= 'Please enter your name.<br>';
+    $errors .= 'Please enter your name.<br>';
   }
 
- if (!preg_match(
-    "/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$/i",
-    $email_address))
-    {
-        $errors .= "\n Error: Invalid email address";
-    }
+//  if (!preg_match(
+//     "/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$/i",
+//     $email_address))
+//     {
+//         $errors .= "\n Error: Invalid email address";
+//     }
+if (empty($_POST['email'])) {
+  $errors[] = "Email is required";
+} else if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
+  $errors[] = "Invalid email address";
+}
     
   if (empty($password)) {
-    $error .= 'Please enter your password.<br>';
+    $errors .= 'Please enter your password.<br>';
   }
 
   if (empty($dob)) {
-    $error .= 'Please enter your date of birth.<br>';
+    $errors .= 'Please enter your date of birth.<br>';
   }
 
   if (empty($gender)) {
-    $error .= 'Please select your gender.<br>';
+    $errors .= 'Please select your gender.<br>';
   }
 
   if (!empty($age) && ($age < 18 || $age > 120)) {
-    $error .= 'Please enter a valid age between 18 and 120.<br>';
+    $errors .= 'Please enter a valid age between 18 and 120.<br>';
   }
 
   if (!empty($website) && !filter_var($website, FILTER_VALIDATE_URL)) {
-    $error .= 'Please enter a valid website URL.<br>';
+    $errors .= 'Please enter a valid website URL.<br>';
   }
 
   if (!empty($phone) && !preg_match('/^[0-9]{3}-[0-9]{2}-[0-9]{3}$/', $phone)) {
-    $error .= 'Please enter a valid phone number in the format 123-45-678.<br>';
+    $errors .= 'Please enter a valid phone number in the format 123-45-678.<br>';
   }
 
   if (!empty($newsletter) && $newsletter != 'yes') {
-    $error .= 'Please agree to subscribe to our newsletter.<br>';
+    $errors .= 'Please agree to subscribe to our newsletter.<br>';
   }
 
   if (empty($message)) {
-    $error .= 'Please enter your message.<br>';
+    $errors .= 'Please enter your message.<br>';
   }
 
   if (empty($terms)) {
-    $error .= 'Please agree to the terms and conditions.<br>';
+    $errors .= 'Please agree to the terms and conditions.<br>';
   }
-
-
-
 
 
 if( empty($errors))
@@ -124,7 +128,7 @@ if( empty($errors))
         exit;
 }
 else {
-    $error = 'There was a problem sending the email.';
+    $errors = 'There was a problem sending the email.';
 }
 }
 
