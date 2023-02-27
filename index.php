@@ -2,13 +2,14 @@
 require_once('database.php');
 
 // Get patients
-$queryPatients = 'SELECT * FROM patient';
-$statement = $db->prepare($queryPatients);
-$statement->execute();
-$patients = $statement->fetchAll();
-$statement->closeCursor();
+// $queryPatients = 'SELECT * FROM patient';
+// $statement = $db->prepare($queryPatients);
+// $statement->execute();
+// $patients = $statement->fetchAll();
+// $statement->closeCursor();
 //print_r($patients); // this is to get the data as an array!
-?>
+// ?>
+
 <?php include 'includes/header.php'; ?> 
 
 
@@ -21,8 +22,6 @@ $statement->closeCursor();
   
 
 </main><!-- /.container -->
-
-
 
 
 

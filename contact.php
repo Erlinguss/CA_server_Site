@@ -8,7 +8,9 @@
     <form method="POST" name="contactform" action="contact-form-handler.php">
       <div class="mb-3">
         <label for="name" class="form-label">Your Name</label>
-        <input type="text" name="name" class="form-control" required>
+        <input type="text" name="name" class="form-control"  required>
+        <!-- <input type="text" name="name" class="form-control" placeholder="first name and surname" required> -->
+    
       </div>
 
       <div class="mb-3">
@@ -16,10 +18,11 @@
         <input type="email" name="email" id="email"class="form-control" required>
       </div>
 
+  
       <div class="mb-3">
       <label for="password">Password:</label>
      <input type="password" id="password" name="password" required>
-          </div>
+          </div> -->
 
 
           <div class="mb-3">
@@ -45,11 +48,6 @@
 
           <label for="website">Website:</label>
   <input type="url" id="website" name="website" placeholder="https://www.example.com">
-
-          <div class="mb-3">
-          <label for="color">Favorite color:</label>
-  <input type="color" id="color" name="color">
-          </div>
 
           <div class="mb-3">
           <label for="attachment">Attachment:</label>
@@ -79,8 +77,7 @@
   <input type="checkbox" id="terms" name="terms" required>
   <a href="/terms" target="_blank">View terms and conditions</a>
 
-    </div>
-
+    </div> 
 
       
       <button type="submit" class="btn btn-primary">Submit</button>

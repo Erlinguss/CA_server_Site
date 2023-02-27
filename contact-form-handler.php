@@ -32,7 +32,6 @@ $dob = $_POST['dob'];
 $gender = $_POST['gender'];
 $age = $_POST['age'];
 $website = $_POST['website'];
-$color = $_POST['color'];
 $attachment = $_POST['attachment'];
 $phone = $_POST['phone'];
 $newsletter = $_POST['newsletter'];
@@ -110,7 +109,6 @@ if( empty($errors))
         Gender: $gender \n
         Age: $age \n
         Website: $website \n
-        Favorite Color: $color \n
         Attachment: $attachment \n
         Phone Number: $phone \n
         Subscribe to Newsletter: $newsletter \n
@@ -125,6 +123,7 @@ if( empty($errors))
     {
         //redirect to the 'thank you' page
         header('Location: contact-form-thank-you.php');
+        
         exit;
 }
 else {
