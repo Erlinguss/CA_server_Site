@@ -22,7 +22,7 @@
       <div class="mb-3">
       <label for="password">Password:</label>
      <input type="password" id="password" name="password" required>
-          </div> -->
+          </div> 
 
 
           <div class="mb-3">

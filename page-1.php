@@ -25,79 +25,87 @@ $statement->closeCursor();
 
 
 <?php include 'includes/header.php';?>
-
+<div class="container">
+<pre>
+    <code>
+      &lt;?php
 <main >
 
-<div class="container" >
+<!-- <div class="container" > -->
+
 <section>
         <!-- display a table of doctors -->
       
-        <table>
+    
         <h1>Doctor Table </h1>
-            <tr>
+            <!-- <tr> -->
                 <!-- <th>Doctor_ID</th> -->
-            
+<!--             
                 <th>First_Name</th>
                 <th>SurName</th>
                 <th>Address</th>
                 <th>Telephone</th>
                 <th>Email</th>
-                <th>Delete</th>
-            </tr>
+                <th>Delete</th> -->
+            <!-- </tr> -->
 
             <?php foreach ($doctors as $doctor) : ?>
-            <tr>
+            <!-- <tr> -->
              
-                <td><?php echo $doctor['First_Name_Doctor']; ?></td>
-                <td><?php echo $doctor['Last_Name_Doctor']; ?></td>
-                 <td><?php echo $doctor['Doctor_Address']; ?></td>
-                <td><?php echo $doctor['Doctor_Telephone']; ?></td>
-                <td><?php echo $doctor['Doctor_Email']; ?></td>
-                <td><form action="contact.php" method="post">
-                        <input type="hidden" name="record_type" value="doctor">
-                        <input type="hidden" name="record_id" value="<?php echo $doctor['Doctor_Id']; ?>">
+                <?php echo $doctor['First_Name_Doctor']; ?>
+                <?php echo $doctor['Last_Name_Doctor']; ?>
+                 <?php echo $doctor['Doctor_Address']; ?>
+                <?php echo $doctor['Doctor_Telephone']; ?>
+                <?php echo $doctor['Doctor_Email']; ?>
+                <form action="contact.php" >
+                        <!-- <input type="hidden" name="record_type" value="doctor"> -->
+                        <!-- <input type="hidden" name="record_id" value="<?php echo $doctor['Doctor_Id']; ?>"> -->
                         <input type="submit" value="Booking">
                     </form>
-</td>
-            </tr>
+<!-- </td> -->
+            <!-- </tr> -->
             <?php endforeach; ?>
-        </table>
-    </section>
+        <!-- </table> -->
+    ?&gt;
+    </code>
+  </pre>
+</div>
 
     </div >
     <div class="container">
    <section>
         <!-- display a table of clinic -->
-        <table>
+        <!-- <table> -->
             <h1>Clinic Table </h1>
-            <tr>
+            <!-- <tr> -->
                 <!-- <th>Clinic_ID</th> -->
-                <th>Clinic_Name</th>
+                <!-- <th>Clinic_Name</th>
                 <th>Address</th>
                 <th>Telephone</th>
                 <th>Email</th>
                 <th>Booking</th>
-            </tr>
+            </tr> -->
 
             <?php foreach ($clinics as $clinic) : ?>
-            <tr>
-                <td><?php echo $clinic['Clinic_Name']; ?></td>
-                <td><?php echo $clinic['Clinic_Address']; ?></td>
-                <td><?php echo $clinic['Clinic_Telephone']; ?></td>
-                <td><?php echo $clinic['Clinic_Email']; ?></td>
-
-                <td><form action="contact.php" method="post">
+            <!-- <tr> -->
+                <?php echo $clinic['Clinic_Name']; ?>
+                <?php echo $clinic['Clinic_Address']; ?>
+                <?php echo $clinic['Clinic_Telephone']; ?>
+                <?php echo $clinic['Clinic_Email']; ?>
+<div>
+                <form action="contact.php" method="post">
     <input type="hidden" name="record_type" value="clinic">
     <input type="hidden" name="record_id" value="<?php echo $clinic['Clinic_Id']; ?>">
     <input type="submit" value="Booking">
-</form></td>
+</form>
+            </div>
 
-            </tr>
+            <!-- </tr> -->
             <?php endforeach; ?>
-        </table>
+        <!-- </table> -->
     </section>
     </div>
     
 
-</main><!-- /.container -->
+</main>
 <?php include 'includes/footer.php';?>
