@@ -3,7 +3,7 @@
 require_once('database.php');
 
 // Get doctors
-$queryDoctor = 'SELECT * FROM doctor';
+$queryDoctor = 'SELECT * FROM Doctor';
 $statement = $db->prepare($queryDoctor);
 $statement->execute();
 $doctors = $statement->fetchAll();
@@ -15,7 +15,7 @@ $statement->closeCursor();
 require_once('database.php');
 
 // Get clinics
-$queryClinic = 'SELECT * FROM clinic';
+$queryClinic = 'SELECT * FROM Clinic';
 $statement = $db->prepare($queryClinic);
 $statement->execute();
 $clinics = $statement->fetchAll();
@@ -39,8 +39,8 @@ $statement->closeCursor();
                 <?php echo $doctor['Doctor_Email']; ?>
           
                 <form action="contact.php"   method="post">
-                        <!-- <input type="hidden" name="record_type" value="doctor"> -->
-                        <!-- <input type="hidden" name="record_id" value="<?php echo $doctor['Doctor_Id']; ?>"> -->
+                        <input type="hidden" name="record_type" value="doctor">
+                        <input type="hidden" name="record_id" value="<?php echo $doctor['Doctor_Id']; ?>">
                         <input type="submit" value="Booking">
                     </form>
           
@@ -59,8 +59,8 @@ $statement->closeCursor();
                 <?php echo $clinic['Clinic_Email']; ?>
 
                 <form action="contact.php" method="post">
-    <!-- <input type="hidden" name="record_type" value="clinic"> -->
-    <!-- <input type="hidden" name="record_id" value="<?php echo $clinic['Clinic_Id']; ?>"> -->
+    <input type="hidden" name="record_type" value="clinic"> 
+     <input type="hidden" name="record_id" value="<?php echo $clinic['Clinic_Id']; ?>">
     <input type="submit" value="Booking">
 </form>
             <?php endforeach; ?>

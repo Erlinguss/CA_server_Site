@@ -1,7 +1,12 @@
 <?php
-     $dsn = 'mysql:host=localhost;dbname=dental_clinic';
+     $dsn = 'mysql:host=localhost;dbname=d00251914';
     $username = 'root';
     $password = '';
+
+    // This code is for the DKIT server site
+    // $dsn = 'mysql:host=localhost;dbname=d00251914';
+    // $username = 'd00251914';
+    // $password = 'jQ46eve2';
     
 
     try {

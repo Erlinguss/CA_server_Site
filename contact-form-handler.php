@@ -8,7 +8,6 @@ if(empty($_POST['name'])  ||
    empty($_POST['dob']) ||
    empty($_POST['gender']) ||
    empty($_POST['website']) ||
-   empty($_POST['attachment ']) ||
    empty($_POST['newsletter']) ||
    empty($_POST['phone']) ||
    empty($_POST['message']) ||
@@ -32,7 +31,6 @@ $dob = $_POST['dob'];
 $gender = $_POST['gender'];
 $age = $_POST['age'];
 $website = $_POST['website'];
-$attachment = $_POST['attachment'];
 $phone = $_POST['phone'];
 $newsletter = $_POST['newsletter'];
 $message = $_POST['message'];
@@ -109,7 +107,6 @@ if( empty($errors))
         Gender: $gender \n
         Age: $age \n
         Website: $website \n
-        Attachment: $attachment \n
         Phone Number: $phone \n
         Subscribe to Newsletter: $newsletter \n
         Message\n $message";
