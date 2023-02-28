@@ -273,20 +273,21 @@ margin-top: 1em;
 
 
 .container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: flexbox;
+  /* justify-content: center;
+  align-items: center; */
   padding-bottom: 30px ;
   padding-top: 50px;
 
 }
+
 /* section {
   float: left;
   width: 500px;
   padding-bottom: 1.5em;
 } */
 
-table {
+/* table {
   
   border-collapse: collapse;
   width: 100%;
@@ -303,12 +304,6 @@ th {
 }
 tr:nth-child(even) {
   background-color: #f2f2f2;
-}
+} */
 
-.container {
-  display: inline-block;
-  width: 33.33%;
-  box-sizing: border-box;
-  padding: 10px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-}
+
