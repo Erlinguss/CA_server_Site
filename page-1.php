@@ -1,15 +1,4 @@
 
-<?php
-require_once('database.php');
-
-// Get doctors
-$queryDoctor = 'SELECT * FROM Doctor';
-$statement = $db->prepare($queryDoctor);
-$statement->execute();
-$doctors = $statement->fetchAll();
-$statement->closeCursor();
-//print_r($doctors); // this is to get the data as an array!
-?>
 
 <?php
 require_once('database.php');
@@ -23,24 +12,36 @@ $statement->closeCursor();
 //print_r($clinics); // this is to get the data as an array!
 ?>
 
+<?php
+require_once('database.php');
+
+// Get treatment_types
+$queryTreatment_type = 'SELECT * FROM treatment_type';
+$statement = $db->prepare($queryTreatment_type);
+$statement->execute();
+$treatment_type = $statement->fetchAll();
+$statement->closeCursor();
+//print_r($treatment_type); // this is to get the data as an array!
+?>
+
 
 <?php include 'includes/header.php';?>
 
 <main >
 
 <div class="container" >
-        <h1>Doctor Data </h1>
+        <h1>Treatment Data </h1>
         
-            <?php foreach ($doctors as $doctor) : ?>
-                <?php echo $doctor['First_Name_Doctor']; ?>
-                <?php echo $doctor['Last_Name_Doctor']; ?>
-                 <?php echo $doctor['Doctor_Address']; ?>
-                <?php echo $doctor['Doctor_Telephone']; ?>
-                <?php echo $doctor['Doctor_Email']; ?>
+            <?php foreach ($treatment_type as $treatment) : ?>
+                <?php echo  $treatment['id']; ?>
+                <?php echo  $treatment['name']; ?>
+                 <?php echo  $treatment['price']; ?>
+                <?php echo  $treatment['duration']; ?>
+                <?php echo  $treatment['materials']; ?>
           
                 <form action="contact.php"   method="post">
-                        <input type="hidden" name="record_type" value="doctor">
-                        <input type="hidden" name="record_id" value="<?php echo $doctor['Doctor_Id']; ?>">
+                        <input type="hidden" name="record_type" value="treatment_type">
+                        <input type="hidden" name="record_id" value="<?php echo  $treatment['id']; ?>">
                         <input type="submit" value="Booking">
                     </form>
           

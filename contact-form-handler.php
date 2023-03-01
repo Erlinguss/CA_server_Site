@@ -8,10 +8,10 @@ if(empty($_POST['name'])  ||
    empty($_POST['dob']) ||
    empty($_POST['gender']) ||
    empty($_POST['city']) ||
+   empty($_POST['zipcode']) ||
    empty($_POST['newsletter']) ||
    empty($_POST['phone']) ||
-   empty($_POST['message']) ||
-   empty($_POST['terms']))
+   empty($_POST['message']))
 
 {
     $errors .= "\n Error: all fields are required";
@@ -31,10 +31,11 @@ $dob = $_POST['dob'];
 $gender = $_POST['gender'];
 $age = $_POST['age'];
 $city = $_POST['city'];
+$zip = $_POST['zipcode'];
 $phone = $_POST['phone'];
 $newsletter = $_POST['newsletter'];
 $message = $_POST['message'];
-$terms = $_POST['terms'];
+
 
 
 
@@ -57,8 +58,6 @@ if (empty($_POST['email'])) {
     $errors .= 'Please enter your date of birth.<br>';
   }
 
-
-
   if (empty($gender)) {
     $errors .= 'Please select your gender.<br>';
   }
@@ -70,6 +69,11 @@ if (empty($_POST['email'])) {
   if (!empty($city)) {
     $errors .= 'Please enter a valid website city.<br>';
   }
+
+  if (!empty($zip)) {
+    $errors .= 'Please enter a valid zip code.<br>';
+  }
+
 
 
   if (!empty($phone) && !preg_match('/^[0-9]{3}-[0-9]{2}-[0-9]{3}$/', $phone)) {
@@ -83,11 +87,6 @@ if (empty($_POST['email'])) {
   if (empty($message)) {
     $errors .= 'Please enter your message.<br>';
   }
-
-  if (empty($terms)) {
-    $errors .= 'Please agree to the terms and conditions.<br>';
-  }
-
 
 if( empty($errors))
 { 
@@ -105,6 +104,7 @@ if( empty($errors))
         Gender: $gender \n
         Age: $age \n
         City: $city \n
+        Zip Code: $zip \n
         Phone Number: $phone \n
         Subscribe to Newsletter: $newsletter \n
         Message\n $message";

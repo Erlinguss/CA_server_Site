@@ -31,7 +31,7 @@
 
         <div >
         <label for="gender"  >Gender:</label>
-  <select id="gender" name="gender"    required  >
+  <select id="gender" name="gender"    required>
     <option value="">Select gender</option>
     <option value="male">Male</option>
     <option value="female">Female</option>
@@ -58,6 +58,11 @@
   </select>
 </div>
 
+<div >
+        <label for="zipcode" class="form-label">Zip code</label>
+        <input type="zip" name="zipcode" class="form-control" placeholder="A91 N5D7" required>
+      </div>
+
       <div >
         <label for="phone" class="form-label">Phone Number</label>
         <input type="tel" name="phone" class="form-control" placeholder="12345678" required>
@@ -66,7 +71,7 @@
 
   <div >
           <label for="newsletter">Subscribe to our newsletter:</label>
-          <input type="checkbox" id="newsletter" name="newsletter" value="yes">
+          <input type="checkbox" id="newsletter" name="newsletter" value="yes" required>
           </div>
 
 
@@ -76,16 +81,9 @@
       </div>
 
 
-      <div >
-      <label for="terms">I agree to the terms and conditions:</label>
-  <input type="checkbox" id="terms" name="terms" required>
-  <a href="/terms" target="_blank">View terms and conditions</a>
-    </div> 
-
-     
-    <button type="submit" class="btn btn-primary">Submit</button>
-      <!-- <button type="reset" class="btn btn-primary">Reset</button> -->
    
+    <button type="submit" class="btn btn-primary">Submit</button>
+    
     </form>
   </div>
 </main>
