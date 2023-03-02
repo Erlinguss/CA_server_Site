@@ -19,10 +19,9 @@
     <img src="images/dental1.jpeg" alt="">
   
   </div>
-  
+
 
 </main><!-- /.container -->
-
 
 
 <div class= container>
