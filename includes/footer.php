@@ -1,4 +1,5 @@
 <script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/imageSlices.js" type="text/javascript"></script>
 
 <footer>
   <div class="container">
@@ -29,9 +30,6 @@
   </div>
 </footer>
 
-
-
-
-
   </body>
+ 
 </html>
