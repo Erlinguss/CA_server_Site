@@ -18,11 +18,8 @@
   
   </head>
   <body>
-    
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Eighth navbar example">
       <div class="container">
-        
-      <!-- <img src="images/dental7.jpg" alt=""> -->
 
         <div class="collapse navbar-collapse" id="navbarsExample07">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
