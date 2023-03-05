@@ -16,7 +16,7 @@ $statement->closeCursor();
 require_once('database.php');
 
 // Get treatment_types
-$queryTreatment_type = 'SELECT * FROM treatment_type';
+$queryTreatment_type = 'SELECT * FROM treatment_typeI';
 $statement = $db->prepare($queryTreatment_type);
 $statement->execute();
 $treatment_type = $statement->fetchAll();
@@ -29,25 +29,26 @@ $statement->closeCursor();
 
 <main >
 
-<div class="container" >
-        <h1>Treatment Data </h1>
-        
-            <?php foreach ($treatment_type as $treatment) : ?>
-                <?php echo  $treatment['id']; ?>
-                <?php echo  $treatment['name']; ?>
-                 <?php echo  $treatment['price']; ?>
-                <?php echo  $treatment['duration']; ?>
-                <?php echo  $treatment['materials']; ?>
-          
-                <form action="contact.php"   method="post">
-                        <input type="hidden" name="record_type" value="treatment_type">
-                        <input type="hidden" name="record_id" value="<?php echo  $treatment['id']; ?>">
-                        <input type="submit" value="Booking">
-                    </form>
-          
+<div class="container">
+        <h1>Treatment Data</h1>
+        <?php foreach ($treatment_type as $treatment) : ?>
+            <div class="treatment">
+                <img src="images/<?php echo $treatment['image']; ?>" alt="<?php echo $treatment['name']; ?>">
+                <h2><?php echo $treatment['name']; ?></h2>
+                <p><strong>Price:</strong> <?php echo $treatment['price']; ?></p>
+                <p><strong>Duration:</strong> <?php echo $treatment['duration']; ?> minutes</p>
+                <p><strong>Materials:</strong> <?php echo $treatment['materials']; ?></p>
+                <form action="contact.php" method="post">
+                    <input type="hidden" name="record_type" value="treatment_type">
+                    <input type="hidden" name="record_id" value="<?php echo $treatment['id']; ?>">
+                    <input type="submit" value="Book Now">
+                </form>
+            </div>
+        <?php endforeach; ?>
+    </div>
 
-            <?php endforeach; ?>
-    </div >
+
+
 
     <div class="container">
 

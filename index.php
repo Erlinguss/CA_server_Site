@@ -21,7 +21,7 @@
             </div>
 
             <div class="mySlides">
-                <img src="images/dental7.jpeg">
+                <img src="images/dental19.jpg">
             </div>
 
             <div class="mySlides">
