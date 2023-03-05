@@ -1,42 +1,31 @@
-<!-- 
-// require_once('database.php');
 
-// Get patients
-// $queryPatients = 'SELECT * FROM patient';
-// $statement = $db->prepare($queryPatients);
-// $statement->execute();
-// $patients = $statement->fetchAll();
-// $statement->closeCursor();
-//print_r($patients); // this is to get the data as an array!
-//-->
 
 <?php include 'includes/header.php'; ?> 
-
 
 <main>
 <div class="slideshow-container">
               <div class="mySlides">
-                <img src="images/dental4.jpg"  width="1550" heigth="550">
+                <img src="images/dental4.jpg">
              </div>
 
             <div class="mySlides">
-               <img src="images/dental1.jpeg" width="1550" heigth="550" >
+               <img src="images/dental1.jpeg">
             </div>
 
             <div class="mySlides">
-                <img src="images/dental2.jpg" width="1550" heigth="550" >
+                <img src="images/dental2.jpg">
             </div>
 
             <div class="mySlides">
-                <img src="images/dental3.jpeg" width="1550" heigth="550"  >
+                <img src="images/dental3.jpeg">
             </div>
 
             <div class="mySlides">
-                <img src="images/dental7.jpeg" width="1550" heigth="550"  >
+                <img src="images/dental7.jpeg">
             </div>
 
             <div class="mySlides">
-                <img src="images/dental8.jpeg" width="1550" heigth="550"  >
+                <img src="images/dental8.jpeg">
             </div>
           
             <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
