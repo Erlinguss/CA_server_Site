@@ -35,7 +35,7 @@
         </button> -->
 
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="page-1.php">Page 1</a>
+                <a class="nav-link" aria-current="page" href="page-1.php">Treatements</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" aria-current="page" href="page-2.php">Page 2</a>
@@ -45,7 +45,7 @@
               </li>
               </li>
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="contact.php">Contact</a>
+                <a class="nav-link" aria-current="page" href="contact.php">Booking Appoitment</a>
               </li>
             </ul>
           </span>

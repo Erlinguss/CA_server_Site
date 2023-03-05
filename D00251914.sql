@@ -1,17 +1,10 @@
-
+DROP DATABASE IF EXISTS D00251914;
 
 CREATE DATABASE IF NOT EXISTS D00251914;
 USE D00251914;
 
-
-CREATE TABLE Clinic ( Clinic_Id   int NOT NULL AUTO_INCREMENT,
-					  Clinic_Name      VARCHAR(50),
-					  Clinic_Address   VARCHAR(200),
-					  Clinic_Telephone VARCHAR(20),
-					  Clinic_Email     VARCHAR(200),
-					  PRIMARY KEY (clinic_id));
-
- CREATE TABLE Treatment_Type (
+CREATE TABLE Treatment_TypeI (
+    image VARCHAR(255),
     id INT PRIMARY KEY,
     name VARCHAR(255) NOT NULL,
     price DECIMAL(10,2),
@@ -19,6 +12,13 @@ CREATE TABLE Clinic ( Clinic_Id   int NOT NULL AUTO_INCREMENT,
     materials VARCHAR(255)
 );
 
+
+create table Clinic ( Clinic_Id   int NOT NULL AUTO_INCREMENT,
+					  Clinic_Name      VARCHAR(50),
+					  Clinic_Address   VARCHAR(200),
+					  Clinic_Telephone VARCHAR(20),
+					  Clinic_Email     VARCHAR(200),
+					  PRIMARY KEY (clinic_id));
 
 
 INSERT INTO Clinic VALUES ("1", "Saint Patrick Dental Clinic", "13 Dublin road, Dundalk","353 8593 8372","spatrick.dentalclinic@gmail.com");				 
@@ -36,16 +36,17 @@ INSERT INTO Clinic VALUES ("12", "Saint abc Detal Clinic", "16 Oak, Sord","353 3
 
 
 
-INSERT INTO Treatment_Type VALUES (1, "Surgery", 500.00, 120, "Surgical instruments, anesthesia");
-INSERT INTO Treatment_Type VALUES (2, "Extraction", 100.00, 30, "Forceps, local anesthesia");
-INSERT INTO Treatment_Type VALUES (3, "Cleaning", 80.00, 45, "Ultrasonic scaler, polishing equipment");
-INSERT INTO Treatment_Type VALUES (4, "Reconstruction", 800.00, 180, "Composite resin, dental cement");
-INSERT INTO Treatment_Type VALUES (5, "LED teeth Whitening", 150.00, 60, "LED light, hydrogen peroxide gel");
-INSERT INTO Treatment_Type VALUES (6, "Dental Implants", 2000.00, 360, "Implant screw, abutment, crown");
-INSERT INTO Treatment_Type VALUES (7, "Dental splint", 300.00, 90, "Acrylic resin, metal wire");
-INSERT INTO Treatment_Type VALUES (8, "Orthodontic brackets", 1000.00, 360, "Metal or ceramic brackets, wires");
-INSERT INTO Treatment_Type VALUES (9, "Removable dentures", 500.00, 90, "Acrylic resin, metal clasps");
-INSERT INTO Treatment_Type VALUES (10, "Periodontal treatment", 200.00, 60, "Scalers, curettes, antibiotics");
+INSERT INTO Treatment_TypeI VALUES ("surgery.jpg", 1, "Surgery", 500.00, 120, "Surgical instruments, anesthesia");
+INSERT INTO Treatment_TypeI VALUES ("extraction.jpg", 2, "Extraction", 100.00, 30, "Forceps, local anesthesia");
+INSERT INTO Treatment_TypeI VALUES ("cleaning.jpg", 3, "Cleaning", 80.00, 45, "Ultrasonic scaler, polishing");
+INSERT INTO Treatment_TypeI VALUES ("reconstruction.jpg", 4, "Reconstruction", 800.00, 180, "Composite resin, dental cement");
+INSERT INTO Treatment_TypeI VALUES ("teeth-whitening.jpg", 5, "LED teeth Whitening", 150.00, 60, "LED light, hydrogen peroxide gel");
+INSERT INTO Treatment_TypeI VALUES ("implants.jpg", 6, "Dental Implants", 2000.00, 360, "Implant screw, abutment, crown");
+INSERT INTO Treatment_TypeI VALUES ("splint.jpg", 7, "Dental splint", 300.00, 90, "Acrylic resin, metal wire");
+INSERT INTO Treatment_TypeI VALUES ("brackets.jpg", 8, "Orthodontic brackets", 1000.00, 360, "Metal or ceramic brackets, wires");
+INSERT INTO Treatment_TypeI VALUES ("dentures.jpg", 9, "Removable dentures", 500.00, 90, "Acrylic resin, metal clasps");
+INSERT INTO Treatment_TypeI VALUES ("periodontal.jpg", 10, "Periodontal treatment", 200.00, 60, "Scalers, curettes, antibiotics");
+
 
 
 
