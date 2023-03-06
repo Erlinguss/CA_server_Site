@@ -1,16 +1,15 @@
 <?php include 'includes/header.php'; ?>
 
-<main class="container">
+<main class="container1">
   <div class="starter-template text-center">
     <h1>Contact us</h1>
     <p class="lead">Please use the form below to get in touch with us.</p>
 
-    <form method="POST" name="contactform" action="contact-form-handler.php">
+    <form class="starter-template text-center" method="POST" name="contactform" action="contact-form-handler.php">
       <div >
         <label for="name" class="form-label">Your Name</label>
         <input type="text" name="name" class="form-control" placeholder="First name and Surname" required>
       </div>
-
 
       <div >
         <label for="email" class="form-label">Email Address</label>

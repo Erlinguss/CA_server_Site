@@ -3,9 +3,8 @@
      $dsn = 'mysql:host=localhost;dbname=d00251914';
     $username = 'root';
     $password = '';
-
     //
-    //  // This code is for the DKIT server without FileZilla
+    //  // This code is for the DKIT server  remotely without FileZilla
     //  $dsn = 'mysql:host=localhost;dbname=d00251914';
     //  $username = 'd00251914';
     //  $password = 'jQ46eve2';

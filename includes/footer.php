@@ -21,9 +21,9 @@
       <div class="col-md-4">
         <h3>Connect With Us</h3>
         <ul class="list-unstyled">
-          <li><a href="#">Facebook</a></li>
+          <li><a href="https://www.facebook.com/GreenDentalIE/">Facebook</a></li>
           <li><a href="#">Twitter</a></li>
-          <li><a href="#">Instagram</a></li>
+          <li><a href="https://www.instagram.com/greendentalie/?hl=en">Instagram</a></li>
         </ul>
       </div>
     </div>

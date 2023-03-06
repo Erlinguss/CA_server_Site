@@ -16,8 +16,11 @@
   
   </head>
   <body>
+             
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Eighth navbar example">
       <div class="container">
+
+      <img class="logo" src="images/logo2.jpg">
 
         <div class="collapse navbar-collapse" id="navbarsExample07">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -25,17 +28,19 @@
           <span class="d-flex">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
-            <a class="navbar-brand" href="index.php">Home</a>
+            <li class="nav-item">
+            <a class="nav-link"  href="index.php">HOME</a>
+            </li>
         <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample07" aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button> -->
 
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="page-1.php">Treatements</a>
+                <a class="nav-link" aria-current="page" href="page-1.php">TREATEMENTS</a>
               </li>
               </li>
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="contact.php">Booking Appointment</a>
+                <a class="nav-link" aria-current="page" href="contact.php">BOOKING APPOINTMENT</a>
               </li>
             </ul>
           </span>

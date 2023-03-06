@@ -20,7 +20,7 @@ $statement->closeCursor();
 
 <main>
   <div class="container">
-    <h5>Treatment offered</h5>
+    <h5>Dental Treatment</h5>
     <div class="row">
       <?php foreach ($treatmentTypes as $treatment) : ?>
         <div class="col-md-3 mb-3">
