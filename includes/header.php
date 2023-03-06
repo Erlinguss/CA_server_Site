@@ -2,21 +2,17 @@
 <html lang="en">
   <head>
 
-  
-  
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.80.0">
     <title>Starter Template · Bootstrap v5.0</title>
-   
     
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css1/mystyle.css" rel="stylesheet" type="text/css">
     <!-- Custom styles for this template -->
-
   
   </head>
   <body>
@@ -37,15 +33,9 @@
               <li class="nav-item">
                 <a class="nav-link" aria-current="page" href="page-1.php">Treatements</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="page-2.php">Page 2</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="page-3.php">Page 3</a>
-              </li>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="contact.php">Booking Appoitment</a>
+                <a class="nav-link" aria-current="page" href="contact.php">Booking Appointment</a>
               </li>
             </ul>
           </span>
