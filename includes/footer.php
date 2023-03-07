@@ -2,33 +2,20 @@
 <script src="js/imageSlices.js" type="text/javascript"></script>
 
 <footer>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-4">
-        <h3>Our Location</h3>
-        <p>1234 Main Street</p>
-        <p>Anytown, USA 12345</p>
-        <p>Phone: 555-555-5555</p>
-      </div>
-      <div class="col-md-4">
-        <h3>Quick Links</h3>
-        <ul class="list-unstyled">
-          <li><a href="#">About Us</a></li>
-          <li><a href="#">Services</a></li>
-          <li><a href="#">Contact Us</a></li>
-        </ul>
-      </div>
-      <div class="col-md-4">
-        <h3>Connect With Us</h3>
-        <ul class="list-unstyled">
-          <li><a href="https://www.facebook.com/GreenDentalIE/">Facebook</a></li>
-          <li><a href="#">Twitter</a></li>
-          <li><a href="https://www.instagram.com/greendentalie/?hl=en">Instagram</a></li>
-        </ul>
+
+<div id="footer">
+      <div>
+        <div id="connect">
+          <a href="https://www.facebook.com/GreenDentalIE/"   className="facebook"><img width="60" src="images/face.png"></a>
+          <a href="https://www.instagram.com/greendentalie/?hl=en" className="twitter"><img width="40" src="images/twitter.png" /></a>
+          <a href="https://www.instagram.com/greendentalie/?hl=en" className="instagram"><img width="40" src="images/instag.jpg" /></a>
+        </div>
+        <p>&copy; 2023 Ireland. All Rights Reserved.</p>
       </div>
     </div>
-  </div>
+
 </footer>
+
 
   </body>
  

@@ -4,33 +4,39 @@
 
 <main>
 <div class="slideshow-container">
-              <div class="mySlides">
-                <img src="images/dental4.jpg">
-             </div>
+  <div class="mySlides">
+    <img src="images/dental4.jpg">
+    <div class="caption"><strong>All Your Dental Needs at One Place</strong> </div>
+  </div>
 
-            <div class="mySlides">
-               <img src="images/dental1.jpeg">
-            </div>
+  <div class="mySlides">
+    <img src="images/dental1.jpeg">
+    <div class="caption"><strong>Did you know you can now book online?</strong></div>
+  </div>
 
-            <div class="mySlides">
-                <img src="images/dental2.jpg">
-            </div>
+  <div class="mySlides">
+    <img src="images/dental2.jpg">
+    <div class="caption"><strong>Munster's Leading Dental and Implant Clinic</strong></div>
+  </div>
 
-            <div class="mySlides">
-                <img src="images/dental3.jpeg">
-            </div>
+  <div class="mySlides">
+    <img src="images/dental3.jpeg">
+    <div class="caption"><strong>Committed to Excellence in Dental Care</strong></div>
+  </div>
 
-            <div class="mySlides">
-                <img src="images/dental19.jpg">
-            </div>
+  <div class="mySlides">
+    <img src="images/dental19.jpg">
+    <div class="caption"><strong>Our philosophy is simple, it is about you!</strong></div>
+  </div>
 
-            <div class="mySlides">
-                <img src="images/dental8.jpeg">
-            </div>
-          
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
-        </div>
+  <div class="mySlides">
+    <img src="images/dental8.jpeg">
+    <div class="caption"><strong>All Your Dental Needs at One Place</strong></div>
+  </div>
+
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
         <br>
 
         <div style="text-align:center">
