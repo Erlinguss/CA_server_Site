@@ -54,6 +54,17 @@
     <option value="Limerick">Limerick</option>
     <option value="Waterford">Waterford</option>
     <option value="Kilkenny">Kilkenny</option>
+    <option value="Drogheda">Drogheda</option>
+     <option value="Sligo">Sligo</option>
+     <option value="Castlebar">Castlebar</option>
+      <option value="Shannon">Shannon</option>
+      <option value="New Ross">New Ross</option>  
+      <option value="Wicklow">Wicklow</option>  
+      <option value="Arklow">Arklow</option>
+      <option value="Wexford">Wexford</option>
+
+    
+
   </select>
 </div>
 
