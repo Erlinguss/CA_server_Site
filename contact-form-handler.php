@@ -62,23 +62,22 @@ if (empty($_POST['email'])) {
     $errors .= 'Please select your gender.<br>';
   }
 
-  if (!empty($age)) {
+
+if (!empty($age) && (!is_numeric($age) || $age < 18 || $age > 120)) {
     $errors .= 'Please enter a valid age between 18 and 120.<br>';
-  }
+}
 
-  if (!empty($city)) {
-    $errors .= 'Please enter a valid website city.<br>';
-  }
+if (!empty($city) && !preg_match('/^[a-zA-Z ]+$/', $city)) {
+    $errors .= 'Please enter a valid city name.<br>';
+}
 
-  if (!empty($zip)) {
-    $errors .= 'Please enter a valid zip code.<br>';
-  }
+if (!empty($zip) && (!is_numeric($zip) || strlen($zip) !== 5)) {
+  $errors .= 'Please enter a valid zip code.<br>';
+}
 
-
-
-  if (!empty($phone) && !preg_match('/^[0-9]{3}-[0-9]{2}-[0-9]{3}$/', $phone)) {
-    $errors .= 'Please enter a valid phone number in the format 12345678.<br>';
-  }
+if (!empty($phone) && !preg_match('/^[0-9]{3}-[0-9]{2}-[0-9]{3}$/', $phone)) {
+  $errors .= 'Please enter a valid phone number in the format 123-45-678.<br>';
+}
 
   if (!empty($newsletter) && $newsletter != 'yes') {
     $errors .= 'Please agree to subscribe to our newsletter.<br>';
@@ -105,7 +104,6 @@ if( empty($errors))
         Age: $age \n
         City: $city \n
         Zip Code: $zip \n
-        Phone Number: $phone \n
         Subscribe to Newsletter: $newsletter \n
         Message\n $message";
 
@@ -122,7 +120,6 @@ else {
     $errors = 'There was a problem sending the email.';
 }
 }
-
 ?>
 
 <!DOCTYPE HTML>

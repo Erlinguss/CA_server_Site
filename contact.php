@@ -6,6 +6,7 @@
     <p class="lead">Please use the form below to get in touch with us.</p>
 
     <form class="starter-template text-center" method="POST" name="contactform" action="contact-form-handler.php">
+    <!-- <form class="starter-template text-center" method="POST" name="contactform" action="contact-form.php"> -->
       <div >
         <label for="name" class="form-label">Your Name</label>
         <input type="text" name="name" class="form-control" placeholder="First name and Surname" required>
@@ -62,20 +63,17 @@
       <option value="Wicklow">Wicklow</option>  
       <option value="Arklow">Arklow</option>
       <option value="Wexford">Wexford</option>
-
-    
-
   </select>
 </div>
 
 <div >
         <label for="zipcode" class="form-label">Zip code</label>
-        <input type="zip" name="zipcode" class="form-control" placeholder="A91 N5D7" required>
+        <input type="zip" name="zipcode" class="form-control" required>
       </div>
 
       <div >
         <label for="phone" class="form-label">Phone Number</label>
-        <input type="tel" name="phone" class="form-control" placeholder="12345678" required>
+        <input type="tel" name="phone" class="form-control"  placeholder="123-45-678" required>
       </div>
 
 
