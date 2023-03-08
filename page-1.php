@@ -71,67 +71,50 @@ if (isset($_GET['sort'])) {
   }
 }
 
-// Get treatment types with search term
-if (isset($_GET['search']) && !empty($_GET['search'])) {
+
+// Search function // self applied PHP features
+if(isset($_GET['search'])) {
   $search = $_GET['search'];
-  $queryTreatmentType = "SELECT * FROM Treatment_TypeI WHERE name LIKE '%$search%'";
-} else {
-  $queryTreatmentType = 'SELECT * FROM Treatment_TypeI';
+  $treatmentTypes = array_filter($treatmentTypes, function($treatment) use ($search) {
+    return strpos(strtolower($treatment['name']), strtolower($search)) !== false;
+  });
 }
-$statement = $db->prepare($queryTreatmentType);
-$statement->execute();
-$treatmentTypes = $statement->fetchAll();
-$statement->closeCursor();
-
-
 
 ?>
+
+
 
 <?php include 'includes/header.php'; ?>
 
 <main>
   <div class="container">
-
-  <form method="get" action="<?php echo $_SERVER['PHP_SELF']; ?>">
-  <div class="form-group">
-    <label for="search">Search:</label>
-    <input type="text" id="search" name="search" class="form-control" value="<?php if (isset($_GET['search'])) { echo $_GET['search']; } ?>" placeholder="Enter keyword(s)">
-  </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
-</form>
-
-
-
-
     <h5>Dental Treatment</h5>
     <div class="row">
       <div class="col-md-12">
 
-  <!--- self applied PHP features---->
-  <form method="get" action="<?php echo $_SERVER['PHP_SELF']; ?>">
-  <div class="form-group">
     
+  <!--- self applied PHP features---->
+
+  <form method="get" action="<?php echo $_SERVER['PHP_SELF']; ?>">
   <label for="sort">Sort by name:</label>
     <select name="sort" id="sort" class="form-control" onchange="this.form.submit()">
       <option value="">Select an option</option>
       <option value="name_asc" <?php if (isset($_GET['sort']) && $_GET['sort'] === 'name_asc') { echo 'selected'; } ?>>A-Z</option>
       <option value="name_desc" <?php if (isset($_GET['sort']) && $_GET['sort'] === 'name_desc') { echo 'selected'; } ?>>Z-A</option>
     </select>
-  </div>
+ 
 </form>
  <!--------------------------------->
 
  <!--- self applied PHP features---->
   
 <form method="get" action="<?php echo $_SERVER['PHP_SELF']; ?>">
-  <div class="form-group">
     <label for="sort">Sort by price:</label>
     <select name="sort" id="sort" class="form-control" onchange="this.form.submit()">
       <option value="">Select an option</option>
       <option value="asc" <?php if (isset($_GET['sort']) && $_GET['sort'] === 'asc') { echo 'selected'; } ?>>Low to High</option>
       <option value="desc" <?php if (isset($_GET['sort']) && $_GET['sort'] === 'desc') { echo 'selected'; } ?>>High to Low</option>
     </select>
-  </div>
 </form>
  <!--------------------------------->
 
@@ -159,6 +142,7 @@ $statement->closeCursor();
     <div class="row">
 
   <!--- self applied PHP features---->
+
   <form method="get" action="<?php echo $_SERVER['PHP_SELF']; ?>">  
   <div class="form-group">
     <label for="sort">Sort by address:</label>
@@ -169,6 +153,7 @@ $statement->closeCursor();
     </select>
   </div>
 </form>
+
  <!--------------------------------->
 
 
