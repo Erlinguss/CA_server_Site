@@ -386,6 +386,13 @@ h5{
 .mySlides img {
     height: 400px;
 }
+
+.form-image {
+  width: 350px;
+  height: 400px;
+ 
+}
+
 }
 
 @media screen and (min-width: 601px) and (max-width: 900px) {
@@ -422,7 +429,7 @@ h6{
   width: 120px;
   height: 70px;
   object-fit: cover;
-  margin-right: 250px;
+  margin-right: 400px;
 
 }
 
