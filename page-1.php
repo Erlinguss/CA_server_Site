@@ -83,7 +83,6 @@ if(isset($_GET['search'])) {
 ?>
 
 
-
 <?php include 'includes/header.php'; ?>
 
 <main>
@@ -122,11 +121,12 @@ if(isset($_GET['search'])) {
 </div>
 <!--------------------------------->
 
-
       </div>
       <?php foreach ($treatmentTypes as $treatment) : ?>
         <div class="col-md-3 mb-3">
+        <div class="text-center">
           <img class="form-image" src="images/<?php echo $treatment['image']; ?>" alt="<?php echo $treatment['name']; ?>" class="img-fluid">
+            </div>
           <h4><?php echo $treatment['name']; ?></h4>
           <p><strong>Price: </strong> €<?php echo $treatment['price']; ?></p>
           <p><strong>Duration: </strong><?php echo $treatment['duration']; ?> minutes</p>

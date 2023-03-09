@@ -35,6 +35,7 @@
 To use this website, simply download the files and host them on a PHP-enabled web server. You will also need to set up a database with information about clinics and treatment types, which can be configured in the database.php file.
 
 Once the website is set up, navigate to the homepage (index.php) to see the slideshow and information about the dental clinic. You can also click on the links in the navigation bar to view information about clinics and treatment types, The program displays a list of dental treatments with their name, price, and image. The treatments can be sorted based on their name or price using the respective dropdowns. The program also allows searching for a treatment by name using the search bar. The clinics and their details are not displayed directly in the frontend but are used for sorting. As well you can use the contact form to submit inquiries to the dental clinic.
+
 # Credits
 The program was created by Erling Munguia.
 
