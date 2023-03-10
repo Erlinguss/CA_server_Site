@@ -15,4 +15,6 @@
   </div>
 
 </main><!-- /.container -->
+<div class="ThankYou">
+</div>
 <?php include 'includes/footer.php'; ?>
