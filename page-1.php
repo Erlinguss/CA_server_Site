@@ -82,7 +82,6 @@ if(isset($_GET['search'])) {
 
 ?>
 
-
 <?php include 'includes/header.php'; ?>
 
 <main>
@@ -92,7 +91,6 @@ if(isset($_GET['search'])) {
       <div class="col-md-12">
 
  
-
   <!--- self applied PHP features---->
  <div class="row">
   <div class="col-md-6">

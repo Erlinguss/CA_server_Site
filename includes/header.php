@@ -12,7 +12,7 @@
     <link href="css1/mystyle.css" rel="stylesheet" type="text/css">
     <!-- Custom styles for this template -->
   </head>
-  <body style="padding-top: 80px;">
+  <body >
     <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">

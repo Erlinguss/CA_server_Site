@@ -25,12 +25,12 @@
   </div>
 
   <div class="mySlides">
-    <img src="images/dental19.jpg">
+    <img src="images/dental7.jpeg">
     <div class="caption"><strong>Our philosophy is simple, it is about you!</strong></div>
   </div>
 
   <div class="mySlides">
-    <img src="images/dental8.jpeg">
+    <img src="images/dental10.jpg">
     <div class="caption"><strong>All Your Dental Needs at One Place</strong></div>
   </div>
 

@@ -79,6 +79,15 @@
     margin-bottom: 20px;
   }  
 
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999; /* to ensure the header is on top of other elements */
+   
+  }
+
   /********************************************************************
   *Style the form message 
 ********************************************************************/
@@ -286,7 +295,7 @@ margin-top: 1em;
  align-items: center; 
  padding-bottom: 120px ;
  padding-top: 50px; 
- margin-left: 45px;
+ margin-left: 5px;
   
   
 
@@ -378,6 +387,10 @@ h5{
 * To make the screens responsive
 ********************************************************************/
 
+body {
+  padding-top: 100px;
+}
+
 
 @media screen and (max-width: 600px) {
   /* Styles for screens smaller than 600px */
@@ -393,8 +406,20 @@ h5{
  
 }
 
+body {
+  padding-top: 120px;
+}
+
 
 }
+
+
+/* @media screen and (max-width: 767px) {
+  body {
+    padding-top: 60px;
+  }
+
+} */
 
 @media screen and (min-width: 601px) and (max-width: 900px) {
   /* Styles for screens between 601px and 900px */
